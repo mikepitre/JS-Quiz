@@ -1,8 +1,3 @@
-
-function print(message) {
-  document.write(message);
-}
-
 var questions = [
   ['What is the capital of Texas?', 'Austin'],
   ['What is the capital of NJ?', 'Trenton'],
@@ -15,13 +10,18 @@ var answer;
 var response;
 var html;
 
-for (i = 0; i < questions.length; i++) {
-  var response = prompt(questions[i][0]);
-  if (response === questions[i][1]) {
+function print(message) {
+  document.write(message);
+}
+
+for (var i = 0; i < questions.length; i+= 1) {
+  question = questions[i][0];
+  answer = questions[i][1];
+  response = prompt(question);
+  if (response === answer) {
     correct += 1;
   }
 };
 
-
-
-print('You got ' + correct + ' question(s) right.');
+html = 'You got ' + correct + ' question(s) right.';
+print(html);
