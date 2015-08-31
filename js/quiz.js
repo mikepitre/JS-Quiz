@@ -21,6 +21,6 @@ for (i = 0; i < questions.length; i++) {
   }
 };
 
-print('You got ' + correct.length + ' question(s) right:' + correct);
+print('You got ' + correct.length + ' question(s) right: ' + correct.join(', '));
 
-print('You got ' + incorrect.length + ' question(s) wrong:' + incorrect);
+print('You got ' + incorrect.length + ' question(s) wrong: ' + incorrect.join(', '));
