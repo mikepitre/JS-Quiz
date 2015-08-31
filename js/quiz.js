@@ -9,18 +9,19 @@ var questions = [
   ['What is the capital of California?', 'Sacramento']
 ];
 
-var correct = [];
-var incorrect = [];
+var correct = 0;
+var question;
+var answer;
+var response;
+var html;
 
 for (i = 0; i < questions.length; i++) {
   var response = prompt(questions[i][0]);
   if (response === questions[i][1]) {
-    correct.push(questions[i][0]);
-  } else {
-    incorrect.push(questions[i][0]);
+    correct += 1;
   }
 };
 
-print('You got ' + correct.length + ' question(s) right: ' + correct.join(', '));
 
-print('You got ' + incorrect.length + ' question(s) wrong: ' + incorrect.join(', '));
+
+print('You got ' + correct + ' question(s) right.');
