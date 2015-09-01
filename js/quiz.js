@@ -39,4 +39,8 @@ for (var i = 0; i < questions.length; i+= 1) {
 };
 
 html = 'You got ' + correct + ' question(s) right.';
+html += '<h2>You got these questions correct:</h2>';
+html += buildList(correctQuestions);
+html += '<h2>You got these questions wrong:</h2>';
+html += buildList(wrongQuestions);
 print(html);
