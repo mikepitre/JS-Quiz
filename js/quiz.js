@@ -1,7 +1,16 @@
 var questions = [
-  ['What is the capital of Texas?', 'Austin'],
-  ['What is the capital of NJ?', 'Trenton'],
-  ['What is the capital of California?', 'Sacramento']
+  {
+    question: 'What is the capital of Texas?',
+    answer: 'Austin'
+  },
+  {
+    question: 'What is the capital of NJ?',
+    answer: 'Trenton'
+  },
+  {
+    question: 'What is the capital of California?',
+    answer: 'Sacramento'
+  }
 ];
 
 var correct = 0;
