@@ -9,10 +9,21 @@ var question;
 var answer;
 var response;
 var html;
+var correctQuestions = [];
+var wrongQuestions = [];
 
 function print(message) {
   var outputDiv = document.getElementById('output');
   outputDiv.innerHTML = message;
+}
+
+function buildList(arr) {
+  var listHTML = '<ol>';
+  for (var i = 0; i < arr.length; i++) {
+    listHTML += '<li>' + arr[i] + '</li>';
+  };
+  listHTML += '</ol>';
+  return listHTML;
 }
 
 for (var i = 0; i < questions.length; i+= 1) {
@@ -21,6 +32,9 @@ for (var i = 0; i < questions.length; i+= 1) {
   response = prompt(question);
   if (response === answer) {
     correct += 1;
+    correctQuestions.push(question);
+  } else {
+    wrongQuestions.push(question);
   }
 };
 
